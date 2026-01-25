@@ -54,111 +54,122 @@
             }
         }
     </style>
-  
-</head>
-<body class="bg-black text-white font-typewriter min-h-screen">
-    <!-- Background Container -->
-    <div id="background-container" class="fixed inset-0 opacity-70">
-        <div id="black-bg" class="absolute inset-0 bg-black"></div>
-        <img id="image-bg" src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="Background image" class="absolute inset-0 w-full h-full object-cover position-center hidden">
-            <!-- Fallback to Image -->
-            <img src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="The Hidden Rage of Wukong" class="w-full h-full object-cover position-center">
-        </video>
-    </div>
-
-<!-- Overlay to darken background -->
-    <div id="overlay" class="fixed inset-0 bg-black/1 z-0"></div>
     
-    <!-- Parallax Background with Video Support -->
-    <div class="relative h-screen overflow-hidden z-20"></div>
-        <div class="absolute inset-0 z-0">
-                <!-- Fallback to Image -->
-                <img src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="The Hidden Rage of Wukong" class="w-full h-full object-cover position-center">
-        </div>
+    <!-- ADD THIS FIX STYLE - Only new addition -->
+    <style>
+        /* FIX 1: Ensure content is above background */
+        #content, .content-wrapper {
+            position: relative;
+            z-index: 50 !important;
+        }
         
-        <!-- Overlay with downward arrow -->
-        <div class="absolute inset-0 bg-black/1 z-10 flex flex-col items-center justify-center">
-            <a href="#content" class="absolute bottom-10 text-4xl animate-bounce text-yellow-300">
-                <i class="fa fa-chevron-down"></i>
-            </a>
-        </div>
+        /* FIX 2: Fix the covering issue */
+        .fixed-bg-fix {
+            z-index: 0 !important;
+        }
+        
+        /* FIX 3: First paragraph larger font */
+        .first-paragraph {
+            font-size: 1.5rem !important;
+            line-height: 1.75 !important;
+        }
+        
+        /* FIX 4: Normal paragraphs consistent */
+        .normal-paragraph {
+            font-size: 1.125rem !important;
+            line-height: 1.75 !important;
+        }
+        
+        /* FIX 5: Ensure text is visible */
+        .text-visible {
+            color: white !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-typewriter min-h-screen">
+    <!-- FIXED: Added fixed-bg-fix class -->
+    <div id="background-container" class="fixed inset-0 opacity-70 fixed-bg-fix">
+        <div id="black-bg" class="absolute inset-0 bg-black"></div>
+        <img id="image-bg" src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="Background image" class="absolute inset-0 w-full h-full object-cover position-center">
     </div>
 
-    <!-- Main Content -->
-    <div id="content" class="container mx-auto px-4 py-16 relative z-20">
+    <!-- Main Content - Added content-wrapper class -->
+    <div id="content" class="container mx-auto px-4 py-16 relative content-wrapper">
         <!-- Text Content Section -->
         <div class="text-center max-w-3xl mx-auto mb-20">
-            <h class="text-[clamp(2rem,8vw,5rem)] font-typewriter text-shadow mb-10">THE HIDDEN RAGE OF WUKONG
-</h>
-            <h2 class="text-4xl md:text-5xl font-typewriter text-center mb-8">Unseen Fury, Dark Fantasy Retelling</h2>
-            
-            </div>
+            <!-- FIXED: Changed <h> to <h1> -->
+            <h1 class="text-[clamp(2rem,8vw,5rem)] font-typewriter text-shadow mb-10 text-visible">THE HIDDEN RAGE OF WUKONG</h1>
+            <h2 class="text-4xl md:text-5xl font-typewriter text-center mb-8 text-visible">Unseen Fury, Dark Fantasy Retelling</h2>
         </div>
     
-    <div class="bg-white/5 p-6 rounded-lg border border-yellow-300/30">
-                    <h3 class="text-2xl font-typewriter text-yellow-300 mb-3"><center>Chapter 1: Stone and Fury  
-</center></h3>
-                    <p class="text-lg md:text-xl font-typewriter leading-relaxed">The mountain cracked with a sound like the sky splitting in two.</p><br> 
+        <div class="bg-white/5 p-6 rounded-lg border border-yellow-300/30 backdrop-blur-sm">
+            <h3 class="text-2xl font-typewriter text-yellow-300 mb-3 text-center text-visible">Chapter 1: Stone and Fury</h3>
+            
+            <!-- FIXED PARAGRAPHS: Applied font fix classes -->
+            <p class="text-lg md:text-xl font-typewriter leading-relaxed first-paragraph text-visible">The mountain cracked with a sound like the sky splitting in two.</p>
+            <br>
 
-        <p>For centuries, it had stood silent—a jagged peak of unyielding rock, its surface weathered by wind and rain. The villagers below called it Huaguo Shan, the Flower-Fruit Mountain, though no flowers grew near its summit. They whispered that the stone was actually alive. That it breathed.  
-</p><br>
+            <p class="font-typewriter normal-paragraph text-visible">For centuries, it had stood silent—a jagged peak of unyielding rock, its surface weathered by wind and rain. The villagers below called it Huaguo Shan, the Flower-Fruit Mountain, though no flowers grew near its summit. They whispered that the stone was actually alive. That it breathed.</p>
+            <br>
 
-<p>They were right.</p><br>
+            <p class="font-typewriter normal-paragraph text-visible">They were right.</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-yellow-300 text-center font-bold">**CRACK.**</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">The boulder shattered. From the rubble, a figure uncoiled, shaking off dust and fragments of rock. Golden fur glistened in the dawn light. Sharp eyes, the color of molten copper, blinked against the sun.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-yellow-300 font-bold">Sun Wukong had been born.</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">He did not know his name yet. He knew only sensation—the chill of the wind, the warmth of the light, the power thrumming in his limbs. He stretched, and the earth trembled.</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">A noise drew his attention. Below the cliff, a troop of monkeys screeched, pointing at him with trembling fingers.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible italic">"A demon!" one cried.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible italic">"A god!" another gasped.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">Wukong tilted his head. Then, with a laugh, he leaped.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">The ground shook when he landed. The monkeys scattered, all but the eldest, who stood his ground, gnarled hands gripping a staff of gnarled wood.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible italic">"Who—what—are you?" the old monkey demanded.</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">Wukong grinned, baring teeth like daggers.</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-yellow-300 font-bold">"I am... me."</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">And the story continued</p>
+            <br>
+        </div>
         
-<p>**CRACK.**  
-  
-</p><br>
-
-<p>The boulder shattered. From the rubble, a figure uncoiled, shaking off dust and fragments of rock. Golden fur glistened in the dawn light. Sharp eyes, the color of molten copper, blinked against the sun.  
-</p><br>
-
-<p>Sun Wukong had been born. 
-</p><br>
-        <p>He did not know his name yet. He knew only sensation—the chill of the wind, the warmth of the light, the power thrumming in his limbs. He stretched, and the earth trembled.  
-</p><br>
-<p>A noise drew his attention. Below the cliff, a troop of monkeys screeched, pointing at him with trembling fingers. </p><br>
-
-<p>"A demon!" one cried.  
-<p><br>
-
-        <p>"A god!" another gasped.  
-</<p>"A god!" another gasped.</p><br>
-
-<p>Wukong tilted his head. Then, with a laugh, he leaped. </p> <br> 
-
-<p>The ground shook when he landed. The monkeys scattered, all but the eldest, who stood his ground, gnarled hands gripping a staff of gnarled wood.  
- </p> <br>
-
-<p>"Who—what—are you?" the old monkey demanded.  
-</p><br>
-        
-<p>Wukong grinned, baring teeth like daggers.</p><br>
-
-<p>"I am... me." </p> 
-<br>
-
-<p>And the story continued</p><br>
-        
-
-
-                </div>
-        <div id="content" class="container mx-auto px-4 py-16 relative z-20">
         <!-- Navigation Buttons -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 mt-8">
             <div class="flex flex-col sm:flex-row justify-center gap-4">
-                
-                <!-- Button 3 -->
                 <a href="/hidden-rage-of-wukong/index.html" class="bg-yellow-500 text-black font-typewriter font-bold text-xl py-4 px-8 rounded-lg hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
                     <i class="fa fa-refresh mr-2"></i>Home
                 </a>
-                
-                </div>
+            </div>
         </div>
+    </div>
     
     <footer class="bg-black border-t border-white/20 py-8 relative z-20">
         <div class="container mx-auto px-4 text-center">
-            <p class="font-typewriter text-white/70">Where Ink Meets Steel and AI Meets Ancestors
-</p>
+            <p class="font-typewriter text-white/70">Where Ink Meets Steel and AI Meets Ancestors</p>
         </div>
     </footer>
 
@@ -184,27 +195,36 @@
             backgroundContainer.style.opacity = config.opacity / 100;
             
             // Set position
-            imageBg.classList.remove('position-left', 'position-center', 'position-right');
-            videoBg.classList.remove('position-left', 'position-center', 'position-right');
-            imageBg.classList.add(`position-${config.position}`);
-            videoBg.classList.add(`position-${config.position}`);
+            if (imageBg) {
+                imageBg.classList.remove('position-left', 'position-center', 'position-right');
+                imageBg.classList.add(`position-${config.position}`);
+            }
+            
+            if (videoBg) {
+                videoBg.classList.remove('position-left', 'position-center', 'position-right');
+                videoBg.classList.add(`position-${config.position}`);
+            }
             
             // Set background type
             if (config.backgroundType === 'image') {
-                imageBg.src = config.imageSource;
-                imageBg.classList.remove('hidden');
-                videoBg.classList.add('hidden');
+                if (imageBg) {
+                    imageBg.src = config.imageSource;
+                    imageBg.classList.remove('hidden');
+                }
+                if (videoBg) videoBg.classList.add('hidden');
                 document.getElementById('black-bg').classList.add('hidden');
             } else if (config.backgroundType === 'video') {
-                videoBg.querySelector('source').src = config.videoSource;
-                videoBg.load();
-                videoBg.classList.remove('hidden');
-                imageBg.classList.add('hidden');
+                if (videoBg) {
+                    videoBg.querySelector('source').src = config.videoSource;
+                    videoBg.load();
+                    videoBg.classList.remove('hidden');
+                }
+                if (imageBg) imageBg.classList.add('hidden');
                 document.getElementById('black-bg').classList.add('hidden');
             } else {
                 document.getElementById('black-bg').classList.remove('hidden');
-                imageBg.classList.add('hidden');
-                videoBg.classList.add('hidden');
+                if (imageBg) imageBg.classList.add('hidden');
+                if (videoBg) videoBg.classList.add('hidden');
             }
             
             // Set text color
@@ -245,6 +265,23 @@
             if (window.innerWidth > 768) {
                 window.addEventListener('scroll', handleScroll);
             }
+            
+            // FIX: Remove problematic overlay elements
+            const problematicOverlay = document.querySelector('#overlay');
+            if (problematicOverlay) {
+                problematicOverlay.style.display = 'none';
+            }
+            
+            // FIX: Clean up broken video tag
+            const brokenVideoTags = document.querySelectorAll('video:not([id])');
+            brokenVideoTags.forEach(tag => tag.remove());
+            
+            // FIX: Ensure content is visible
+            const contentDivs = document.querySelectorAll('#content');
+            contentDivs.forEach(div => {
+                div.style.zIndex = '50';
+                div.style.position = 'relative';
+            });
         });
     </script>
 </body>
