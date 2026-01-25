@@ -1,1 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- [TODO: Update metadata with your specific book details] -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==================== SEO OPTIMIZED STRUCTURE ==================== -->
+    <title>Kau Chim Wisdom: Confucius Reimagined | Digital Art Novel</title>
+    <meta name="description" content="Award-winning digital artist Chen Bobby Kim Ling reimagines Confucius in a cyberpunk saga. AI-enhanced storytelling meets ancient Chinese philosophy. Available on itch.io.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Kau Chim Wisdom: Confucius Reimagined">
+    <meta property="og:description" content="AI-enhanced digital art novel merging Confucian philosophy with cyberpunk storytelling">
+    <meta property="og:image" content="https://[YOUR_USERNAME].github.io/images/social-preview.jpg"> <!-- [TODO: Add social preview image] -->
+    <meta property="og:url" content="https://[YOUR_USERNAME].github.io"> <!-- [TODO: Your GitHub Pages URL] -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Kau Chim Wisdom">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kau Chim Wisdom: Confucius Reimagined">
+    <meta name="twitter:description" content="Where ancient Chinese wisdom meets AI-enhanced storytelling">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://[YOUR_USERNAME].github.io"> <!-- [TODO: Your GitHub Pages URL] -->
+    
+    <!-- JSON-LD Structured Data (CRITICAL FOR SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Kau Chim Wisdom: Confucius Reimagined",
+        "description": "An AI-enhanced digital art novel that reimagines Confucius in a cyberpunk world",
+        "author": {
+            "@type": "Person",
+            "name": "Chen Bobby Kim Ling",
+            "description": "Award-winning digital artist merging Eastern tradition with Western technology"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://your-username.itch.io/kau-chim-wisdom", <!-- [TODO: Your itch.io URL] -->
+            "price": "19.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "itch.io"
+            }
+        },
+        "genre": ["Cyberpunk", "Historical Fiction", "Philosophical Fiction"],
+        "datePublished": "2024",
+        "publisher": "Self-published via itch.io",
+        "fileFormat": ["PDF", "EPUB"]
+    }
+    </script>
+    
+    <!-- ==================== STYLING & SCRIPTS ==================== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        typewriter: ['"American Typewriter"', 'serif'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(251, 191, 36, 0.5)' },
+                            '50%': { boxShadow: '0 0 40px rgba(251, 191, 36, 0.8)' }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .parallax {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            }
+            .glow-text {
+                text-shadow: 0 0 15px rgba(251, 191, 36, 0.8);
+            }
+            .neon-border {
+                border: 2px solid rgba(251, 191, 36, 0.5);
+                box-shadow: 0 0 15px rgba(251, 191, 36, 0.3), inset 0 0 15px rgba(251, 191, 36, 0.1);
+            }
+            .grid-background {
+                background-image: 
+                    linear-gradient(rgba(251, 191, 36, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(251, 191, 36, 0.05) 1px, transparent 1px);
+                background-size: 50px 50px;
+            }
+        }
+    </style>
+</head>
 
+<body class="bg-black text-white font-typewriter min-h-screen grid-background">
+    <!-- Background Container -->
+    <div id="background-container" class="fixed inset-0 z-0 opacity-80">
+        <div id="black-bg" class="absolute inset-0 bg-black"></div>
+        <img id="image-bg" src="KC018.jpg" alt="Background image" class="absolute inset-0 w-full h-full object-cover position-center hidden">
+        <video id="video-bg" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover position-center hidden">
+            <source src="KC018.mp4" type="video/mp4">
+            <img src="KC018.jpg" alt="Kau Chim Sign 018" class="w-full h-full object-cover position-center">
+        </video>
+    </div>
+
+    <!-- Overlay to darken background -->
+    <div id="overlay" class="fixed inset-0 bg-black/20 z-10"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <div class="relative h-screen overflow-hidden z-20">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover position-center" id="backgroundVideo">
+                <source src="Preface.mp4" type="video/mp4">
+                <img src="KC018.jpg" alt="Kau Chim Sign 018" class="w-full h-full object-cover position-center">
+            </video>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
+            <div class="text-center max-w-6xl">
+                <h1 class="text-[clamp(3rem,10vw,6rem)] font-typewriter text-shadow glow-text mb-6 leading-tight">
+                    KAU CHIM<br>WISDOM
+                </h1>
+                <h2 class="text-2xl md:text-4xl font-typewriter text-yellow-300 mb-8">
+                    Confucius Reimagined in a Cyberpunk World
+                </h2>
+                
+                <!-- [TODO: Replace with your book subtitle] -->
+                <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-white/90">
+                    Where ancient Chinese philosophy meets AI-enhanced storytelling
+                </p>
+                
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50 flex items-center gap-2">
+                        <i class="fa fa-shield text-yellow-400"></i>
+                        <span>Secure Purchase via itch.io</span>
+                    </div>
+                    <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50 flex items-center gap-2">
+                        <i class="fa fa-download text-yellow-400"></i>
+                        <span>Instant Digital Download</span>
+                    </div>
+                    <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50 flex items-center gap-2">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <span>Award-Winning Author</span>
+                    </div>
+                </div>
+                
+                <!-- Main CTA Button -->
+                <div class="mb-8">
+                    <a href="#purchase" class="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold text-2xl py-5 px-12 rounded-full hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-1 shadow-2xl hover:shadow-yellow-500/50 animate-pulse-glow inline-block">
+                        <i class="fa fa-rocket mr-3"></i>Get the Book
+                    </a>
+                </div>
+                
+                <a href="#content" class="absolute bottom-10 text-4xl animate-bounce text-yellow-300">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div id="content" class="container mx-auto px-4 py-16 relative z-20">
+        
+        <!-- [TODO: SECTION 1 - BOOK INTRODUCTION IN FULLER DETAILS] -->
+        <section class="mb-20 max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-black/80 to-gray-900/80 p-8 md:p-12 rounded-2xl border border-yellow-500/30 shadow-2xl">
+                <h2 class="text-4xl md:text-5xl font-typewriter text-center mb-10 text-yellow-300">
+                    The Book: Kau Chim Wisdom
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-10">
+                    <div>
+                        <!-- [TODO: Add your book cover image] -->
+                        <img src="book-cover.jpg" alt="Kau Chim Wisdom Book Cover" class="w-full rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-typewriter text-white mb-6">A Revolutionary Fusion</h3>
+                        <div class="space-y-4 text-lg">
+                            <p>Kau Chim Wisdom is more than a book—it's an <span class="text-yellow-300">experiment in storytelling</span> where:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>Ancient Confucian philosophy</strong> clashes with cyberpunk aesthetics</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>AI serves as digital inkstone</strong> while human creativity guides the brush</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>Gen Z protagonists</strong> navigate a world where technology tests traditional values</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>Interactive elements</span> blend with traditional narrative</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extended Description -->
+                <div class="mt-10">
+                    <h3 class="text-2xl font-typewriter text-white mb-6">What Makes This Unique?</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-black/50 p-6 rounded-xl border border-white/10">
+                            <h4 class="text-xl text-yellow-300 mb-3"><i class="fa fa-paint-brush mr-2"></i>Visual Innovation</h4>
+                            <p>Every chapter features AI-generated artwork that evolves with the story, creating a truly multimedia experience.</p>
+                        </div>
+                        <div class="bg-black/50 p-6 rounded-xl border border-white/10">
+                            <h4 class="text-xl text-yellow-300 mb-3"><i class="fa fa-brain mr-2"></i>Philosophical Depth</h4>
+                            <p>Core Confucian concepts—ren (benevolence), yi (justice), li (ritual)—are tested in futuristic scenarios.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 2 - DESIGN ELEMENTS FOR CREDIBILITY] -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-typewriter text-center mb-12 text-white">Why Readers Trust This Project</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Credibility Element 1 -->
+                <div class="bg-gradient-to-br from-black/90 to-gray-900/90 p-8 rounded-xl border border-yellow-500/30 text-center hover:border-yellow-500/70 transition-all duration-300">
+                    <div class="text-5xl text-yellow-400 mb-4">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+                    <h3 class="text-2xl font-typewriter text-white mb-3">Award-Winning Author</h3>
+                    <p class="text-white/80">Chen Bobby Kim Ling has received international recognition for digital art innovation.</p>
+                </div>
+                
+                <!-- Credibility Element 2 -->
+                <div class="bg-gradient-to-br from-black/90 to-gray-900/90 p-8 rounded-xl border border-yellow-500/30 text-center hover:border-yellow-500/70 transition-all duration-300">
+                    <div class="text-5xl text-yellow-400 mb-4">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <h3 class="text-2xl font-typewriter text-white mb-3">itch.io Guarantee</h3>
+                    <p class="text-white/80">Secure transactions, instant delivery, and DRM-free files through a trusted platform.</p>
+                </div>
+                
+                <!-- Credibility Element 3 -->
+                <div class="bg-gradient-to-br from-black/90 to-gray-900/90 p-8 rounded-xl border border-yellow-500/30 text-center hover:border-yellow-500/70 transition-all duration-300">
+                    <div class="text-5xl text-yellow-400 mb-4">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-typewriter text-white mb-3">Transparent Process</h3>
+                    <p class="text-white/80">Open about the AI-human collaboration process, demystifying creative technology.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 3 - ACTION BUTTONS GRID] -->
+        <section id="purchase" class="mb-20">
+            <h2 class="text-4xl font-typewriter text-center mb-12 text-white">Explore & Engage</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Button 1: Purchase on itch.io -->
+                <a href="https://[YOUR_USERNAME].itch.io/[BOOK_NAME]" 
+                   rel="nofollow sponsored" 
+                   class="bg-gradient-to-r from-yellow-700 to-yellow-600 text-black font-bold text-xl py-6 px-4 rounded-xl hover:from-yellow-600 hover:to-yellow-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-shopping-cart text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Buy on itch.io</span>
+                    <span class="text-sm mt-2">Secure Purchase • Instant Download</span>
+                </a>
+                
+                <!-- Button 2: Read Reviews -->
+                <a href="https://[YOUR_USERNAME].itch.io/[BOOK_NAME]/reviews" 
+                   rel="nofollow sponsored"
+                   class="bg-gradient-to-r from-blue-900/80 to-blue-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-blue-800 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-star text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Read Reviews</span>
+                    <span class="text-sm mt-2">See What Readers Say</span>
+                </a>
+                
+                <!-- Button 3: Sample HTML Page 1 -->
+                <a href="sample1.html" 
+                   class="bg-gradient-to-r from-purple-900/80 to-purple-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-purple-800 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-file-text text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Sample Chapter 1</span>
+                    <span class="text-sm mt-2">Free Preview</span>
+                </a>
+                
+                <!-- Button 4: Sample HTML Page 2 -->
+                <a href="sample2.html" 
+                   class="bg-gradient-to-r from-green-900/80 to-green-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-green-800 hover:to-green-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-image text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Art Gallery</span>
+                    <span class="text-sm mt-2">Visual Preview</span>
+                </a>
+                
+                <!-- Button 5: Sample HTML Page 3 -->
+                <a href="sample3.html" 
+                   class="bg-gradient-to-r from-red-900/80 to-red-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-red-800 hover:to-red-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-video-camera text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Video Trailer</span>
+                    <span class="text-sm mt-2">Watch Preview</span>
+                </a>
+                
+                <!-- Button 6: Free Gift -->
+                <a href="free-gift.html" 
+                   class="bg-gradient-to-r from-cyan-900/80 to-cyan-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-cyan-800 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-gift text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Free Gift</span>
+                    <span class="text-sm mt-2">Download Bonus Content</span>
+                </a>
+                
+                <!-- Button 7: Tally.so Dashboard -->
+                <a href="https://tally.so/dashboard" 
+                   class="bg-gradient-to-r from-pink-900/80 to-pink-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-pink-800 hover:to-pink-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-bar-chart text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Progress Dashboard</span>
+                    <span class="text-sm mt-2">View Project Analytics</span>
+                </a>
+                
+                <!-- Button 8: Spare Link 1 -->
+                <a href="[YOUR_URL_HERE]" 
+                   class="bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-gray-800 hover:to-gray-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-link text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">[Button Title 1]</span>
+                    <span class="text-sm mt-2">[Description]</span>
+                </a>
+                
+                <!-- Button 9: Spare Link 2 -->
+                <a href="[YOUR_URL_HERE]" 
+                   class="bg-gradient-to-r from-indigo-900/80 to-indigo-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-indigo-800 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-external-link text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">[Button Title 2]</span>
+                    <span class="text-sm mt-2">[Description]</span>
+                </a>
+                
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 4 - PREFACE/AUTHOR SECTION] -->
+        <section class="mb-20">
+            <div class="bg-gradient-to-br from-black/80 to-gray-900/80 p-8 md:p-12 rounded-2xl border border-yellow-500/30 shadow-2xl max-w-5xl mx-auto">
+                <h2 class="text-4xl font-typewriter text-center mb-10 text-yellow-300">From the Author</h2>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
+                    <div class="md:w-1/3">
+                        <!-- [TODO: Add author photo] -->
+                        <div class="relative group">
+                            <img src="author-photo.jpg" alt="Chen Bobby Kim Ling" class="w-full rounded-xl shadow-2xl">
+                            <div class="absolute inset-0 bg-yellow-500/10 rounded-xl group-hover:bg-transparent transition-all duration-300"></div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <h3 class="text-2xl text-white">Chen Bobby Kim Ling</h3>
+                            <p class="text-yellow-300">Digital Artist | International Award Winner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <div class="bg-black/40 p-6 rounded-xl border border-white/10">
+                            <p class="text-lg leading-relaxed mb-4">
+                                As a digital artist who's painted with light across international galleries, I've won awards for merging tradition with technology. But this project? It's the work I was born to create.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                I'm ethnic Chinese, raised between worlds. My grandmother whispered tales of Confucius like bedtime stories; my teachers preached Silicon Valley innovation. I craved a story where ancient wisdom didn't gather dust — where <span class="text-yellow-300">ren (benevolence) and yi (justice)</span> could duel with the urgency of a superhero saga.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="preface.html" class="inline-flex items-center text-yellow-300 text-xl hover:text-yellow-200 transition-colors">
+                        <i class="fa fa-book mr-2"></i>
+                        Read Full Preface
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 5 - TECHNICAL DETAILS FOR GEN Z] -->
+        <section class="mb-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-typewriter text-center mb-8 text-white">The Tech Behind the Story</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black/50 p-6 rounded-xl border border-yellow-500/20">
+                        <h3 class="text-xl text-yellow-300 mb-3"><i class="fa fa-code mr-2"></i>AI as Creative Partner</h3>
+                        <p>Using DeepSeek and DouBao for narrative expansion, scene generation, and philosophical dialogue enhancement.</p>
+                    </div>
+                    <div class="bg-black/50 p-6 rounded-xl border border-yellow-500/20">
+                        <h3 class="text-xl text-yellow-300 mb-3"><i class="fa fa-paint-brush mr-2"></i>Digital Art Pipeline</h3>
+                        <p>AI-generated assets refined through professional digital art tools for visual consistency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black/90 border-t border-yellow-500/30 py-12 relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="font-typewriter text-white/70 text-lg">
+                        Where Ink Meets Steel and AI Meets Ancestors
+                    </p>
+                    <p class="text-white/50 text-sm mt-2">
+                        © 2024 Chen Bobby Kim Ling. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <!-- [TODO: Add your social media links] -->
+                    <a href="#" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/[YOUR_USERNAME]" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="#" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8 pt-8 border-t border-white/10">
+                <p class="text-white/50 text-sm">
+                    This website is hosted on GitHub Pages. 
+                    <!-- [TODO: Add your GitHub Pages URL] -->
+                    <a href="https://github.com/[YOUR_USERNAME]/[YOUR_USERNAME].github.io" class="text-yellow-400 hover:text-yellow-300">
+                        View source code
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuration Settings
+            const config = {
+                backgroundType: 'image',
+                imageSource: 'KC018.jpg',
+                videoSource: 'KC018.mp4',
+                opacity: 80,
+                position: 'center',
+                textColor: 'white'
+            };
+            
+            // Apply configuration
+            const backgroundContainer = document.getElementById('background-container');
+            const imageBg = document.getElementById('image-bg');
+            const videoBg = document.getElementById('video-bg');
+            
+            // Set opacity
+            backgroundContainer.style.opacity = config.opacity / 100;
+            
+            // Set position
+            const positionClass = `position-${config.position}`;
+            imageBg.classList.remove('position-left', 'position-center', 'position-right');
+            videoBg.classList.remove('position-left', 'position-center', 'position-right');
+            imageBg.classList.add(positionClass);
+            videoBg.classList.add(positionClass);
+            
+            // Set background type
+            if (config.backgroundType === 'image') {
+                imageBg.src = config.imageSource;
+                imageBg.classList.remove('hidden');
+                videoBg.classList.add('hidden');
+                document.getElementById('black-bg').classList.add('hidden');
+            } else if (config.backgroundType === 'video') {
+                videoBg.querySelector('source').src = config.videoSource;
+                videoBg.load();
+                videoBg.classList.remove('hidden');
+                imageBg.classList.add('hidden');
+                document.getElementById('black-bg').classList.add('hidden');
+            } else {
+                document.getElementById('black-bg').classList.remove('hidden');
+                imageBg.classList.add('hidden');
+                videoBg.classList.add('hidden');
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Parallax effect
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax');
+                
+                parallaxElements.forEach(element => {
+                    const rate = element.getAttribute('data-rate') || 0.5;
+                    element.style.transform = `translateY(${scrolled * rate}px)`;
+                });
+            });
+            
+            // Add animation to buttons on hover
+            document.querySelectorAll('.group').forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
