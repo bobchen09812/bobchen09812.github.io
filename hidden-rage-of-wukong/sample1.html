@@ -89,12 +89,33 @@
 </head>
 
 <body class="bg-black text-white font-typewriter min-h-screen">
-    <!-- FIXED: Added fixed-bg-fix class -->
-    <div id="background-container" class="fixed inset-0 opacity-70 fixed-bg-fix">
+    <!-- Background Container -->
+    <div id="background-container" class="fixed inset-0 z-0 opacity-70">
         <div id="black-bg" class="absolute inset-0 bg-black"></div>
-        <img id="image-bg" src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="Background image" class="absolute inset-0 w-full h-full object-cover position-center">
+        <img id="image-bg" src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="Background image" class="absolute inset-0 w-full h-full object-cover position-center hidden">
+            <!-- Fallback to Image -->
+            <img src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="The Hidden Rage of Wukong" class="w-full h-full object-cover position-center">
+    </div>
+    
+ <!-- Overlay to darken background -->
+    <div id="overlay" class="fixed inset-0 bg-black/1 z-10"></div>
+    
+    <!-- Parallax Background with Video Support -->
+    <div class="relative h-screen overflow-hidden z-20"></div>
+        <div class="absolute inset-0 z-0">
+                <!-- Fallback to Image -->
+                <img src="/hidden-rage-of-wukong/assets/Wukong 1.jpg" alt="The Hidden Rage of Wukong" class="w-full h-full object-cover position-center">
+        </div>
+        
+        <!-- Overlay with downward arrow -->
+        <div class="absolute inset-0 bg-black/1 z-10 flex flex-col items-center justify-center">
+            <a href="#content" class="absolute bottom-10 text-4xl animate-bounce text-yellow-300">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
     </div>
 
+   
     <!-- Main Content - Added content-wrapper class -->
     <div id="content" class="container mx-auto px-4 py-16 relative content-wrapper">
         <!-- Text Content Section -->
@@ -153,7 +174,7 @@
             <p class="font-typewriter normal-paragraph text-yellow-300 font-bold">"I am... me."</p>
             <br>
 
-            <p class="font-typewriter normal-paragraph text-visible">And the story continued</p>
+            <p class="font-typewriter normal-paragraph text-visible">And the story continued...</p>
             <br>
         </div>
         
