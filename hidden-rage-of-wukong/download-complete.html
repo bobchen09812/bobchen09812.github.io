@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download Complete!</title>
+    <title>Download Complete! - The Hidden Rage of Wukong</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
             min-height: 100vh;
             display: flex;
@@ -18,40 +18,43 @@
         }
         
         .container {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(30, 41, 59, 0.8);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(251, 191, 36, 0.3);
             border-radius: 20px;
             padding: 40px;
             max-width: 500px;
             width: 100%;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
         
         .success-icon {
-            font-size: 60px;
-            color: #10b981;
+            font-size: 70px;
             margin-bottom: 20px;
-            animation: bounce 1s infinite alternate;
+            display: block;
+            animation: float 3s ease-in-out infinite;
         }
         
-        @keyframes bounce {
-            from { transform: translateY(0); }
-            to { transform: translateY(-10px); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
         }
         
         h1 {
-            font-size: 28px;
+            font-size: 32px;
             margin-bottom: 15px;
-            color: #fbbf24;
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         p {
             font-size: 16px;
             line-height: 1.6;
-            margin-bottom: 25px;
-            color: #e5e7eb;
+            margin-bottom: 20px;
+            color: #cbd5e1;
         }
         
         .button {
@@ -59,7 +62,7 @@
             background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             color: black;
             font-weight: bold;
-            padding: 15px 30px;
+            padding: 16px 32px;
             border-radius: 12px;
             text-decoration: none;
             font-size: 18px;
@@ -67,11 +70,12 @@
             border: none;
             cursor: pointer;
             margin: 10px;
+            min-width: 200px;
         }
         
         .button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
         }
         
         .secondary-button {
@@ -84,21 +88,33 @@
             color: #60a5fa;
             text-decoration: underline;
             cursor: pointer;
+            font-size: 14px;
         }
         
         .loader {
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            border: 4px solid rgba(255, 255, 255, 0.1);
             border-top: 4px solid #f59e0b;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            animation: spin 1.5s linear infinite;
+            margin: 30px auto;
         }
         
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+        
+        .filename {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 1px solid rgba(251, 191, 36, 0.2);
         }
         
         @media (max-width: 600px) {
@@ -107,110 +123,215 @@
             }
             
             h1 {
-                font-size: 24px;
+                font-size: 26px;
             }
             
             .button {
-                padding: 12px 24px;
+                padding: 14px 24px;
                 font-size: 16px;
+                min-width: auto;
+                width: 100%;
+                margin: 8px 0;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="success-icon">🎉</div>
-        <h1>Thank You!</h1>
+        <div class="success-icon">🎁</div>
+        <h1>Your Download is Ready!</h1>
         
+        <!-- Step 1: Loading state -->
         <div id="step1">
-            <p>Your download is starting...</p>
+            <p>Starting your download and opening Etsy store...</p>
             <div class="loader"></div>
-            <p class="text-sm">Opening Etsy store in a new tab</p>
+            <p><small>This will happen automatically in a few seconds</small></p>
         </div>
         
+        <!-- Step 2: Success state (hidden initially) -->
         <div id="step2" style="display: none;">
-            <p><strong>✅ Download Started!</strong><br>
-            Your file is being downloaded.</p>
+            <p><strong style="color: #10b981;">✅ Success!</strong></p>
+            <p>Your file is downloading now:</p>
+            <div class="filename">the-hidden-rage-of-wukong-download.pdf.zip</div>
             
-            <p>Check your downloads folder for:<br>
-            <code>the-hidden-rage-of-wukong-download.pdf.zip</code></p>
+            <p>We've also opened our Etsy store in a new tab for you to explore!</p>
             
-            <div style="margin: 30px 0;">
+            <div style="margin: 35px 0;">
+                <!-- Replace YOUR_ETSY_SHOP_NAME with your actual Etsy shop name -->
                 <a href="https://www.etsy.com/shop/TrulyDGtal?section_id=37749889" 
                    target="_blank" 
                    class="button">
-                    Visit Our Etsy Store
+                    🛍️ Visit Our Etsy Store
                 </a>
                 <br>
                 <a href="index.html" class="button secondary-button">
-                    Return to Home
+                    ↩️ Return to Home
                 </a>
             </div>
             
-            <p style="font-size: 14px; color: #9ca3af;">
-                Didn't get the download? 
-                <span class="link" onclick="retryDownload()">Click here to try again</span>
-            </p>
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 20px;">
+                <p style="font-size: 14px; color: #94a3b8;">
+                    <strong>Having issues?</strong><br>
+                    <span class="link" onclick="retryDownload()">Click here to try downloading again</span><br>
+                    or check your browser's downloads folder.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Step 3: Manual download fallback (hidden) -->
+        <div id="step3" style="display: none;">
+            <p style="color: #f59e0b;">⚠️ Download didn't start automatically</p>
+            <p>Please click the button below to download manually:</p>
+            <a id="manualDownload" href="#" download class="button">
+                ⬇️ Download Manually
+            </a>
         </div>
     </div>
 
     <script>
-        // Your actual download file
-        const downloadUrl = '../download/the-hidden-rage-of-wukong-download.pdf.zip';
-        const etsyUrl = 'https://www.etsy.com/shop/TrulyDGtal?section_id=37749889';
+        // ============================================
+        // CONFIGURATION - CHANGE THESE TWO LINES ONLY!
+        // ============================================
+        const downloadFileUrl = '../download/the-hidden-rage-of-wukong-download.pdf.zip'; // Your actual file path
+        const etsyStoreUrl = 'https://www.etsy.com/shop/TrulyDGtal?section_id=37749889'; // Your actual Etsy shop URL
+        // ============================================
         
-        // Function to trigger download
+        // Elements
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const step3 = document.getElementById('step3');
+        const manualDownloadLink = document.getElementById('manualDownload');
+        
+        // Set manual download link
+        if (manualDownloadLink) {
+            manualDownloadLink.href = downloadFileUrl;
+            manualDownloadLink.download = 'the-hidden-rage-of-wukong-instructions.zip';
+        }
+        
+        // Function to trigger download (FIXED - no incremental numbers)
         function startDownload() {
-            const link = document.createElement('a');
-            link.href = downloadUrl;
-            link.download = 'the-hidden-rage-of-wukong-download.pdf.zip';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            return true;
+            try {
+                // Add cache-busting parameter to prevent Chrome's (1), (2), (3) issue
+                const uniqueUrl = downloadFileUrl + '?download=' + Date.now();
+                
+                // Create invisible link
+                const link = document.createElement('a');
+                link.href = uniqueUrl;
+                link.download = 'the-hidden-rage-of-wukong-instructions.zip';
+                link.style.display = 'none';
+                
+                // Add to page and click it
+                document.body.appendChild(link);
+                link.click();
+                
+                // Clean up after a delay
+                setTimeout(() => {
+                    if (document.body.contains(link)) {
+                        document.body.removeChild(link);
+                    }
+                }, 3000);
+                
+                console.log('Download triggered:', link.download);
+                return true;
+                
+            } catch (error) {
+                console.error('Download error:', error);
+                return false;
+            }
         }
         
-        // Function to open Etsy
-        function openEtsy() {
-            window.open(etsyUrl, '_blank');
+        // Function to open Etsy store
+        function openEtsyStore() {
+            try {
+                // Check if we already opened Etsy (prevent multiple tabs)
+                if (!sessionStorage.getItem('etsyOpened')) {
+                    window.open(etsyStoreUrl, '_blank', 'noopener,noreferrer');
+                    sessionStorage.setItem('etsyOpened', 'true');
+                    
+                    // Clear after 10 minutes
+                    setTimeout(() => {
+                        sessionStorage.removeItem('etsyOpened');
+                    }, 600000);
+                }
+                return true;
+            } catch (error) {
+                console.error('Etsy open error:', error);
+                return false;
+            }
         }
         
-        // Main sequence
-        function initDownload() {
-            // Open Etsy immediately
-            openEtsy();
+        // Main function to run everything
+        function startDownloadProcess() {
+            console.log('Starting download process...');
             
-            // Start download after 1 second
+            // Step 1: Open Etsy store
+            setTimeout(() => {
+                openEtsyStore();
+            }, 300);
+            
+            // Step 2: Start download after a short delay
             setTimeout(() => {
                 const downloadSuccess = startDownload();
                 
+                // Step 3: Show appropriate message
                 if (downloadSuccess) {
-                    // Show success message
-                    document.getElementById('step1').style.display = 'none';
-                    document.getElementById('step2').style.display = 'block';
+                    // Success - show step 2
+                    step1.style.display = 'none';
+                    step2.style.display = 'block';
+                    step3.style.display = 'none';
+                } else {
+                    // Failed - show manual download
+                    step1.style.display = 'none';
+                    step2.style.display = 'none';
+                    step3.style.display = 'block';
                 }
-            }, 1000);
+            }, 1200);
         }
         
         // Retry function
         function retryDownload() {
-            document.getElementById('step1').style.display = 'block';
-            document.getElementById('step2').style.display = 'none';
+            // Show loading again
+            step1.style.display = 'block';
+            step2.style.display = 'none';
+            step3.style.display = 'none';
             
+            // Retry after a moment
             setTimeout(() => {
-                startDownload();
-                document.getElementById('step1').style.display = 'none';
-                document.getElementById('step2').style.display = 'block';
-            }, 500);
+                const success = startDownload();
+                if (success) {
+                    step1.style.display = 'none';
+                    step2.style.display = 'block';
+                    step3.style.display = 'none';
+                } else {
+                    step1.style.display = 'none';
+                    step2.style.display = 'none';
+                    step3.style.display = 'block';
+                }
+            }, 800);
         }
         
-        // Start everything when page loads
-        window.addEventListener('load', initDownload);
+        // Start the process when page loads
+        window.addEventListener('load', function() {
+            // Small delay for better UX
+            setTimeout(startDownloadProcess, 500);
+        });
         
-        // Also start if user clicks anywhere (some mobile browsers require user interaction)
-        document.body.addEventListener('click', function() {
-            initDownload();
-        }, { once: true });
+        // Also start if user clicks anywhere (helps with some mobile browsers)
+        let userClicked = false;
+        document.addEventListener('click', function() {
+            if (!userClicked) {
+                userClicked = true;
+                startDownloadProcess();
+            }
+        });
+        
+        // If user presses any key, also trigger (accessibility)
+        document.addEventListener('keydown', function() {
+            if (!userClicked) {
+                userClicked = true;
+                startDownloadProcess();
+            }
+        });
     </script>
 </body>
 </html>
