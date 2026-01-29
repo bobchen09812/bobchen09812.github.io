@@ -205,7 +205,7 @@
         // Set manual download link
         if (manualDownloadLink) {
             manualDownloadLink.href = downloadFileUrl;
-            manualDownloadLink.download = 'the-hidden-rage-of-wukong-instructions.zip';
+            manualDownloadLink.download = 'the-hidden-rage-of-wukong-download.pdf.zip';
         }
         
         // Function to trigger download (FIXED - no incremental numbers)
@@ -217,7 +217,7 @@
                 // Create invisible link
                 const link = document.createElement('a');
                 link.href = uniqueUrl;
-                link.download = 'the-hidden-rage-of-wukong-instructions.zip';
+                link.download = 'the-hidden-rage-of-wukong-download.pdf.zip';
                 link.style.display = 'none';
                 
                 // Add to page and click it
