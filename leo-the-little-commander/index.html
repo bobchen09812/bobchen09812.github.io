@@ -1,1 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4WVH68QK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-FV4WVH68QK');
+</script>
+    
+    <!-- [TODO: Update metadata with your specific book details] -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ==================== SEO OPTIMIZED STRUCTURE ==================== -->
+    <title>The Hidden Rage of Wukong</title>
+    <meta name="description" content="Award-winning digital artist Chen Bobby Kim Ling reimagines The Fury Of Wukong, a Dark Fantasy Retelling where AI-enhanced storytelling meets ancient Chinese Story. Available on itch.io.">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="The Hidden Rage of Wukong<: Unseen Fury, a Dark Fantasy Retelling">
+    <meta property="og:description" content="AI-enhanced digital art novel merging Wukong ancient story with cyberpunk storytelling">
+    <meta property="og:image" content="https://bobchen09812.github.io/images/social-preview.jpg"> <!-- [TODO: Add social preview image] -->
+    <meta property="og:url" content="https://bobchen09812.github.io"> <!-- [TODO: Your GitHub Pages URL] -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="The Hidden Rage of Wukong">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Hidden Rage of Wukong: Unseen Fury, a Dark Fantasy Retelling">
+    <meta name="twitter:description" content="Where ancient Chinese wisdom meets AI-enhanced storytelling">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://bobchen09812.github.io"> <!-- [TODO: Your GitHub Pages URL] -->
+    
+    <!-- JSON-LD Structured Data (CRITICAL FOR SEO) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "The Hidden Rage of Wukong: Unseen Fury, a Dark Fantasy Retelling",
+        "description": "An AI-enhanced digital art novel that reimagines The Hidden Rage of Wukong told in Dark Furry Fantasy Manner",
+        "author": {
+            "@type": "Person",
+            "name": "Chen Bobby Kim Ling",
+            "description": "Award-winning digital artist merging Eastern tradition with Western technology"
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": "https://trulydgtal.itch.io/the-hidden-rage-of-wukong-unseen-fury-dark-fantasy-retelling-graphic-novel", <!-- [TODO: Your itch.io URL] -->
+            "price": "19.99",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/PreOrder",
+            "seller": {
+                "@type": "Organization",
+                "name": "itch.io"
+            }
+        },
+        "genre": "Cyberpunk", "Historical Fiction", "Public Domain", "Philosophical Fiction", "Digital Downloas", "Actions",
+        "datePublished": "2026",
+        "publisher": "Self-published via itch.io",
+        "fileFormat":"PDF"
+    }
+    </script>
+    
+    <!-- ==================== STYLING & SCRIPTS ==================== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        typewriter: ['"American Typewriter"', 'serif'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'pulse-glow': {
+                            '0%, 100%': { boxShadow: '0 0 20px rgba(251, 191, 36, 0.5)' },
+                            '50%': { boxShadow: '0 0 40px rgba(251, 191, 36, 0.8)' }
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .parallax {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            }
+            .glow-text {
+                text-shadow: 0 0 15px rgba(251, 191, 36, 0.8);
+            }
+            .neon-border {
+                border: 2px solid rgba(251, 191, 36, 0.5);
+                box-shadow: 0 0 15px rgba(251, 191, 36, 0.3), inset 0 0 15px rgba(251, 191, 36, 0.1);
+            }
+            .grid-background {
+                background-image: 
+                    linear-gradient(rgba(251, 191, 36, 0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(251, 191, 36, 0.05) 1px, transparent 1px);
+                background-size: 50px 50px;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-typewriter min-h-screen grid-background">
+    <!-- Background Container -->
+    <div id="background-container" class="fixed inset-0 z-0 opacity-80">
+        <div id="black-bg" class="absolute inset-0 bg-black"></div>
+        <img id="image-bg" src="" alt="" class="absolute inset-0 w-full h-full object-cover position-center hidden">
+        <video id="video-bg" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover position-center hidden">
+            <source src="/hidden-rage-of-wukong/assets/cover.mp4" type="video/mp4">
+            <img src="/hidden-rage-of-wukong/assets/cover.jpg" alt="The Hidden Rage of Wukong" class="w-full h-full object-cover position-center">
+        </video>
+    </div>
+
+    <!-- Overlay to darken background -->
+    <div id="overlay" class="fixed inset-0 bg-black/20 z-10"></div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <div class="relative h-screen overflow-hidden z-20">
+        <div class="absolute inset-0 z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover position-center" id="backgroundVideo">
+                <source src="/hidden-rage-of-wukong/assets/cover.mp4" type="video/mp4">
+                <img src="/hidden-rage-of-wukong/assets/cover.jpg" alt="The Hidden Rage of Wukong" class="w-full h-full object-cover position-center">
+            </video>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="absolute inset-0 z-10 flex flex-col items-center justify-center px-4">
+            <div class="text-center max-w-6xl">
+                <h1 class="text-[clamp(3rem,10vw,6rem)] font-typewriter text-shadow glow-text mb-6 leading-tight">
+                   THE HIDDEN RAGE OF<br>WUKONG
+                </h1>
+                <h2 class="text-2xl md:text-4xl font-typewriter text-yellow-300 mb-8">
+                    Unseen Fury, a Dark Fantasy Retelling
+                </h2>
+                
+                <!-- [TODO: Replace with your book subtitle] -->
+                <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto text-white/90">
+                    Where ancient Chinese tale meets AI-enhanced storytelling
+                </p>
+                
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50 flex items-center gap-2">
+                        <i class="fa fa-shield text-yellow-400"></i>
+                        <span>Secure Purchase via itch.io</span>
+                    </div>
+                    <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50 flex items-center gap-2">
+                        <i class="fa fa-download text-yellow-400"></i>
+                        <span>Instant Digital Download</span>
+                    </div>
+                    <div class="bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-yellow-500/50 flex items-center gap-2">
+                        <i class="fa fa-star text-yellow-400"></i>
+                        <span>Award-Winning Author</span>
+                    </div>
+                </div>
+                
+                <!-- Main CTA Button -->
+                <div class="mb-8">
+                    <a href="https://trulydgtal.itch.io/the-hidden-rage-of-wukong-unseen-fury-dark-fantasy-retelling-graphic-novel" target="_blank" class="bg-gradient-to-r from-yellow-600 to-yellow-500 text-black font-bold text-2xl py-5 px-12 rounded-full hover:from-yellow-500 hover:to-yellow-400 transition-all duration-300 transform hover:-translate-y-1 shadow-2xl hover:shadow-yellow-500/50 animate-pulse-glow inline-block">
+                        <i class="fa fa-rocket mr-3"></i>Get the Book
+                    </a>
+                </div>
+                
+                <a href="#content" class="absolute bottom-10 text-4xl animate-bounce text-yellow-300">
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <div id="content" class="container mx-auto px-4 py-16 relative z-20">
+        
+        <!-- [TODO: SECTION 1 - BOOK INTRODUCTION IN FULLER DETAILS] -->
+        <section class="mb-20 max-w-4xl mx-auto">
+            <div class="bg-gradient-to-br from-black/80 to-gray-900/80 p-8 md:p-12 rounded-2xl border border-yellow-500/30 shadow-2xl">
+                <h2 class="text-4xl md:text-5xl font-typewriter text-center mb-10 text-yellow-300">
+                    The Book: The Hidden Rage Of Wukong
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-10">
+                    <div>
+                        <!-- [TODO: Add your book cover image] -->
+                        <img src="/hidden-rage-of-wukong/assets/cover.jpg" alt="The Hidden Rage of Wukong Cover" class="w-full rounded-xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-typewriter text-white mb-6">A Revolutionary Fusion</h3>
+                        <div class="space-y-4 text-lg">
+                            <p>The Hidden Rage of Wukongis more than a book—it's an <span class="text-yellow-300">experiment in storytelling</span> where:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>An Ancient Chinese Tale Relives</strong> And Becomes A Collection of Artworks and Literature </span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>AI serves as digital inkstone</strong> while human creativity guides the brush and writing</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>For gamers</strong> discovering Wukong through modern adaptations, consider this your “secret lore compendium”</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>For myth lovers,</strong> a “blood-soaked revival”</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>Gen Z protagonists</strong> navigate a world where technology tests traditional values</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fa fa-chevron-right text-yellow-400 mt-1 mr-3"></i>
+                                    <span><strong>Digital Comics 40+ artworks</span><span>Blend with traditional narrative >100pages</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extended Description -->
+                <div class="mt-10">
+                    <h3 class="text-2xl font-typewriter text-white mb-6">Storyline</h3><br>
+                    <p>While modern adaptations like some popular games the tale here breathe fresh life into Sun Wukong’s legend, an original 16th-century epic’s core of the a monkey with an unyielding rage who dared to challenge Heaven itself. This is Wukong unchained—not as a hero or villain, but as chaos incarnate, battling gods, dragons, and his own hubris.  </p><br>
+                    <h3 class="text-2xl font-typewriter text-white mb-6">What Makes This Unique?</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-black/50 p-6 rounded-xl border border-white/10">
+                            <h4 class="text-xl text-yellow-300 mb-3"><i class="fa fa-paint-brush mr-2"></i>Visual Innovation</h4>
+                            <p>Every chapter features AI-generated artwork that evolves with the story, creating a truly multimedia experience.</p>
+                        </div>
+                        <div class="bg-black/50 p-6 rounded-xl border border-white/10">
+                            <h4 class="text-xl text-yellow-300 mb-3"><i class="fa fa-brain mr-2"></i>Story Depth</h4>
+                            <p>Accompany with this Book is a set of videos, where motions are added to the story</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 2 - DESIGN ELEMENTS FOR CREDIBILITY] -->
+        <section class="mb-20">
+            <h2 class="text-4xl font-typewriter text-center mb-12 text-white">Why Readers Trust This Project</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Credibility Element 1 -->
+                <div class="bg-gradient-to-br from-black/90 to-gray-900/90 p-8 rounded-xl border border-yellow-500/30 text-center hover:border-yellow-500/70 transition-all duration-300">
+                    <div class="text-5xl text-yellow-400 mb-4">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+                    <h3 class="text-2xl font-typewriter text-white mb-3">Award-Winning Author</h3>
+                    <p class="text-white/80">Chen Bobby Kim Ling has received international recognition for digital art innovation.</p>
+                </div>
+                
+                <!-- Credibility Element 2 -->
+                <div class="bg-gradient-to-br from-black/90 to-gray-900/90 p-8 rounded-xl border border-yellow-500/30 text-center hover:border-yellow-500/70 transition-all duration-300">
+                    <div class="text-5xl text-yellow-400 mb-4">
+                        <i class="fa fa-shield"></i>
+                    </div>
+                    <h3 class="text-2xl font-typewriter text-white mb-3">itch.io Guarantee</h3>
+                    <p class="text-white/80">Secure transactions, instant delivery, and DRM-free files through a trusted platform.</p>
+                </div>
+                
+                <!-- Credibility Element 3 -->
+                <div class="bg-gradient-to-br from-black/90 to-gray-900/90 p-8 rounded-xl border border-yellow-500/30 text-center hover:border-yellow-500/70 transition-all duration-300">
+                    <div class="text-5xl text-yellow-400 mb-4">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                    <h3 class="text-2xl font-typewriter text-white mb-3">Transparent Process</h3>
+                    <p class="text-white/80">Open about the AI-human collaboration process, demystifying creative technology.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 3 - ACTION BUTTONS GRID] -->
+        <section id="purchase" class="mb-20">
+            <h2 class="text-4xl font-typewriter text-center mb-12 text-white">Explore & Engage</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                
+                <!-- Button 1: Purchase on itch.io -->
+                <a href="https://trulydgtal.itch.io/the-hidden-rage-of-wukong-unseen-fury-dark-fantasy-retelling-graphic-novel" target="_blank" 
+                   rel="nofollow sponsored" 
+                   class="bg-gradient-to-r from-yellow-700 to-yellow-600 text-black font-bold text-xl py-6 px-4 rounded-xl hover:from-yellow-600 hover:to-yellow-500 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-shopping-cart text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Buy on itch.io</span>
+                    <span class="text-sm mt-2">Secure Purchase • Instant Download</span>
+                </a>
+                
+                  <!-- Button 2: Free Videos  -->
+                <a href="free-gift.html" 
+                   class="bg-gradient-to-r from-cyan-900/80 to-cyan-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-cyan-800 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-gift text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Free Videos</span>
+                    <span class="text-sm mt-2">Download Videos That Comes With Book</span>
+                </a>
+                
+                <!-- Button 3: Sample HTML Page 1 -->
+                <a href="sample1.html" 
+                   class="bg-gradient-to-r from-purple-900/80 to-purple-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-purple-800 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-file-text text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Sample Chapter 1</span>
+                    <span class="text-sm mt-2">Free Preview</span>
+                </a>
+                
+                 <!-- Button 4: Main Page -->                
+                <a href="https://bobchen09812.github.io/" target="_blank"
+                   class="bg-gradient-to-r from-orange-900/80 to-orange-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-orange-800 hover:to-orange-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-file-text text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Main Page</span>
+                    <span class="text-sm mt-2">Product Introduction</span>
+                </a>               
+                
+                <!-- Button 5: More Shopping -->
+                <a href="https://www.etsy.com/shop/TrulyDGtal?section_id=37749889" target="_blank"
+                   class="bg-gradient-to-r from-gray-900/80 to-gray-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-gray-800 hover:to-gray-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-link text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Etsy</span>
+                    <span class="text-sm mt-2">More Of My Productions</span>
+                </a>              
+                
+                 <!-- Button 6: Art Gallery -->
+                <a href="https://trulydgtal.com/" target="_blank"
+                   class="bg-gradient-to-r from-green-900/80 to-green-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-green-800 hover:to-green-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-image text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Art Gallery</span>
+                    <span class="text-sm mt-2">My Website</span>
+                </a>
+                
+                <!-- Button 7: Spare Link 2 -->
+                <a href="https://www.etsy.com/shop/TrulyDGtal?section_id=37749889" target="_blank"
+                   class="bg-gradient-to-r from-indigo-900/80 to-indigo-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-indigo-800 hover:to-indigo-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-external-link text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Coming Soon</span>
+                    <span class="text-sm mt-2">Be Patient</span>
+                </a>
+
+                <!-- Button 8: Spare Link 2 -->
+                <a href="https://art28.trulydgtal.com/" target="_blank"
+                   class="bg-gradient-to-r from-blue-900/80 to-blue-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-blue-800 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+                    <i class="fa fa-external-link text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+                    <span class="text-2xl">Ask I-Ching A Question</span>
+                    <span class="text-sm mt-2">Select "Your Answer" Button</span>
+                </a>                
+                
+                <!-- Privacy Policy Button -->
+                <a href="privacy.html" 
+              class="bg-gradient-to-r from-red-900/80 to-red-800/80 text-white font-bold text-xl py-6 px-4 rounded-xl hover:from-red-800 hover:to-red-700 transition-all duration-300 transform hover:-translate-y-2 shadow-lg hover:shadow-2xl flex flex-col items-center justify-center text-center group">
+               <i class="fa fa-shield text-4xl mb-3 group-hover:scale-110 transition-transform"></i>
+               <span class="text-2xl">Privacy Policy</span>
+             <span class="text-sm mt-2">Data & GA4 Information</span>
+                </a>            
+                
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 4 - PREFACE/AUTHOR SECTION] -->
+        <section class="mb-20">
+            <div class="bg-gradient-to-br from-black/80 to-gray-900/80 p-8 md:p-12 rounded-2xl border border-yellow-500/30 shadow-2xl max-w-5xl mx-auto">
+                <h2 class="text-4xl font-typewriter text-center mb-10 text-yellow-300">From the Author</h2>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-center mb-8">
+                    <div class="md:w-1/3">
+                        <!-- [TODO: Add author photo] -->
+                        <div class="relative group">
+                            <img src="author-photo.jpg" alt="Chen Bobby Kim Ling" class="w-full rounded-xl shadow-2xl">
+                            <div class="absolute inset-0 bg-yellow-500/10 rounded-xl group-hover:bg-transparent transition-all duration-300"></div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <h3 class="text-2xl text-white">Chen Bobby Kim Ling</h3>
+                            <p class="text-yellow-300">Digital Artist | International Award Winner</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-2/3">
+                        <div class="bg-black/40 p-6 rounded-xl border border-white/10">
+                            <p class="text-lg leading-relaxed mb-4">
+                                As a digital artist who's painted with light across international galleries, I've won awards for merging tradition with technology. But this project? It's the work I was born to create.
+                            </p>
+                            <p class="text-lg leading-relaxed">
+                                I'm ethnic Chinese, raised between worlds. My grandmother whispered Chinese taleslike bedtime stories; my teachers preached Silicon Valley innovation. I craved a story where ancient wisdom didn't gather dust — where <span class="text-yellow-300">digital science and art mixed,</span> and where East and West shares the same story.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="biography.html" class="inline-flex items-center text-yellow-300 text-xl hover:text-yellow-200 transition-colors">
+                        <i class="fa fa-book mr-2"></i>
+                        Read Full Biography & Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- [TODO: SECTION 5 - TECHNICAL DETAILS FOR GEN Z] -->
+        <section class="mb-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-typewriter text-center mb-8 text-white">The Tech Behind the Story</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-black/50 p-6 rounded-xl border border-yellow-500/20">
+                        <h3 class="text-xl text-yellow-300 mb-3"><i class="fa fa-code mr-2"></i>AI as Creative Partner</h3>
+                        <p>Using DeepSee for narrative expansion, Doubao and NightCafe for scene generation, and philosophical dialogue enhancement.</p>
+                    </div>
+                    <div class="bg-black/50 p-6 rounded-xl border border-yellow-500/20">
+                        <h3 class="text-xl text-yellow-300 mb-3"><i class="fa fa-paint-brush mr-2"></i>Digital Art Pipeline</h3>
+                        <p>Some AI-generated assets refined through professional digital art tools to achieve visual consistency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black/90 border-t border-yellow-500/30 py-12 relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="font-typewriter text-white/70 text-lg">
+                        Where Ink Meets Steel and AI Meets Ancestors
+                    </p>
+                    <p class="text-white/50 text-sm mt-2">
+                        © 2026 Chen Bobby Kim Ling. All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <!-- [TODO: Add your social media links] -->
+                    <a href="https://x.com/bobchen09812" target="_blank" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/bchen09812" target="_blank" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/bobchen09812" target="_blank" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <a href="https://trulydgtal.com/" target="_blank" class="text-white/70 hover:text-yellow-300 text-2xl transition-colors">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8 pt-8 border-t border-white/10">
+                <p class="text-white/50 text-sm">
+                    This website is hosted on GitHub Pages. 
+                    <!-- [TODO: Add your GitHub Pages URL] -->
+                    <a href="https://github.com/bobchen09812/bobchen09812.github.io/" class="text-yellow-400 hover:text-yellow-300">
+                        View source code
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuration Settings
+            const config = {
+                backgroundType: 'image',
+                imageSource: 'KC018.jpg',
+                videoSource: 'KC018.mp4',
+                opacity: 80,
+                position: 'center',
+                textColor: 'white'
+            };
+            
+            // Apply configuration
+            const backgroundContainer = document.getElementById('background-container');
+            const imageBg = document.getElementById('image-bg');
+            const videoBg = document.getElementById('video-bg');
+            
+            // Set opacity
+            backgroundContainer.style.opacity = config.opacity / 100;
+            
+            // Set position
+            const positionClass = `position-${config.position}`;
+            imageBg.classList.remove('position-left', 'position-center', 'position-right');
+            videoBg.classList.remove('position-left', 'position-center', 'position-right');
+            imageBg.classList.add(positionClass);
+            videoBg.classList.add(positionClass);
+            
+            // Set background type
+            if (config.backgroundType === 'image') {
+                imageBg.src = config.imageSource;
+                imageBg.classList.remove('hidden');
+                videoBg.classList.add('hidden');
+                document.getElementById('black-bg').classList.add('hidden');
+            } else if (config.backgroundType === 'video') {
+                videoBg.querySelector('source').src = config.videoSource;
+                videoBg.load();
+                videoBg.classList.remove('hidden');
+                imageBg.classList.add('hidden');
+                document.getElementById('black-bg').classList.add('hidden');
+            } else {
+                document.getElementById('black-bg').classList.remove('hidden');
+                imageBg.classList.add('hidden');
+                videoBg.classList.add('hidden');
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Parallax effect
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallaxElements = document.querySelectorAll('.parallax');
+                
+                parallaxElements.forEach(element => {
+                    const rate = element.getAttribute('data-rate') || 0.5;
+                    element.style.transform = `translateY(${scrolled * rate}px)`;
+                });
+            });
+            
+            // Add animation to buttons on hover
+            document.querySelectorAll('.group').forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.02)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+    <!-- ==================== GA4 COOKIE CONSENT BANNER ==================== -->
+<!-- ADD THIS CODE RIGHT BEFORE </body> IN YOUR index.html -->
+
+<div id="ga4-cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gray-900 to-black border-t border-yellow-500/50 z-50 p-4 hidden shadow-2xl">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <!-- Message -->
+            <div class="md:w-3/4">
+                <div class="flex items-center mb-2">
+                    <i class="fa fa-chart-line text-yellow-300 mr-2"></i>
+                    <h3 class="text-lg font-bold text-white">Google Analytics 4 Notice</h3>
+                </div>
+                <p class="text-white/80 text-sm">
+                    This site uses <strong>Google Analytics 4 (GA4)</strong> to understand how visitors use the site. 
+                    GA4 collects anonymous data about page visits and clicks to help improve content. 
+                    <a href="privacy.html#ga4" class="text-yellow-300 hover:text-yellow-200 underline text-sm">
+                        Learn more in Privacy Policy
+                    </a>
+                </p>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <button id="accept-ga4" 
+                        class="bg-gradient-to-r from-green-600 to-green-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-500 hover:to-green-400 transition-all duration-300 flex items-center justify-center min-w-[140px]">
+                    <i class="fa fa-check mr-2"></i>
+                    Accept GA4
+                </button>
+                
+                <button id="reject-ga4" 
+                        class="bg-gradient-to-r from-gray-700 to-gray-600 text-white font-bold py-3 px-6 rounded-lg hover:from-gray-600 hover:to-gray-500 transition-all duration-300 flex items-center justify-center min-w-[140px]">
+                    <i class="fa fa-times mr-2"></i>
+                    Reject GA4
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- GA4 Consent Script -->
+<script>
+    // GA4 Consent Management - ADD THIS SCRIPT TOO
+    document.addEventListener('DOMContentLoaded', function() {
+        const cookieBanner = document.getElementById('ga4-cookie-banner');
+        
+        // Check if user already made a choice (waits 30 days before asking again)
+        const consentChoice = localStorage.getItem('ga4-consent-choice');
+        const consentDate = localStorage.getItem('ga4-consent-date');
+        
+        // Show banner if no choice made OR choice was made over 30 days ago
+        const shouldShowBanner = () => {
+            if (!consentChoice) return true; // No choice yet
+            
+            if (consentDate) {
+                const lastChoiceDate = new Date(consentDate);
+                const thirtyDaysAgo = new Date();
+                thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+                
+                // Show again if choice was made more than 30 days ago
+                return lastChoiceDate < thirtyDaysAgo;
+            }
+            
+            return true;
+        };
+        
+        // Show banner if needed
+        if (shouldShowBanner()) {
+            setTimeout(() => {
+                cookieBanner.classList.remove('hidden');
+                cookieBanner.classList.add('animate-slide-up');
+            }, 1000); // Show after 1 second
+        } else if (consentChoice === 'accepted') {
+            // If previously accepted, load GA4 automatically
+            loadGoogleAnalytics4();
+        }
+        
+        // Accept GA4 Button
+        document.getElementById('accept-ga4').addEventListener('click', function() {
+            saveConsentChoice('accepted');
+            cookieBanner.classList.add('hidden');
+            loadGoogleAnalytics4();
+            showConsentToast('GA4 analytics enabled. Thank you!', 'success');
+        });
+        
+        // Reject GA4 Button
+        document.getElementById('reject-ga4').addEventListener('click', function() {
+            saveConsentChoice('rejected');
+            cookieBanner.classList.add('hidden');
+            showConsentToast('GA4 analytics disabled. Privacy respected.', 'info');
+        });
+        
+        // Save user's choice
+        function saveConsentChoice(choice) {
+            localStorage.setItem('ga4-consent-choice', choice);
+            localStorage.setItem('ga4-consent-date', new Date().toISOString());
+            
+            // Also set a cookie for server-side detection (if needed)
+            document.cookie = `ga4_consent=${choice}; path=/; max-age=${365 * 24 * 60 * 60}`;
+        }
+        
+        // Load Google Analytics 4 (only if accepted)
+        function loadGoogleAnalytics4() {
+            // Prevent double loading
+            if (window.dataLayer && window.gtag) {
+                console.log('GA4 already loaded');
+                return;
+            }
+            
+            // Your GA4 Measurement ID - REPLACE THIS WITH YOUR ACTUAL ID
+            const GA4_MEASUREMENT_ID = 'G-FV4WVH68QK';
+            
+            // Load GA4 script
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_MEASUREMENT_ID}`;
+            document.head.appendChild(script);
+            
+            // Initialize GA4
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            // Configure GA4 with privacy settings
+            gtag('config', GA4_MEASUREMENT_ID, {
+                'anonymize_ip': true,
+                'allow_google_signals': false,
+                'allow_ad_personalization_signals': false
+            });
+            
+            // Track the consent event
+            gtag('event', 'ga4_consent_accepted', {
+                'event_category': 'Consent',
+                'event_label': 'GA4 Analytics'
+            });
+            
+            console.log('Google Analytics 4 loaded with user consent');
+        }
+        
+        // Show a small notification
+        function showConsentToast(message, type) {
+            const toast = document.createElement('div');
+            toast.className = `fixed top-4 right-4 px-4 py-3 rounded-lg shadow-xl z-50 animate-fade-in ${type === 'success' ? 'bg-green-900/90 text-green-100' : 'bg-blue-900/90 text-blue-100'}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.add('animate-fade-out');
+                setTimeout(() => toast.remove(), 300);
+            }, 3000);
+        }
+        
+        // Add animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slide-up {
+                from { transform: translateY(100%); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+            @keyframes fade-in {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes fade-out {
+                from { opacity: 1; }
+                to { opacity: 0; }
+            }
+            .animate-slide-up {
+                animation: slide-up 0.5s ease-out;
+            }
+            .animate-fade-in {
+                animation: fade-in 0.3s ease-out;
+            }
+            .animate-fade-out {
+                animation: fade-out 0.3s ease-in;
+            }
+        `;
+        document.head.appendChild(style);
+    });
+</script>
+<footer class="bg-black/90 border-t border-yellow-500/30 py-12 relative z-20">
+    <div class="container mx-auto px-4">
+        <!-- ... existing footer content ... -->
+        
+        <div class="text-center mt-8 pt-8 border-t border-white/10">
+            <p class="text-white/50 text-sm">
+                <a href="privacy.html" class="text-yellow-400 hover:text-yellow-300 mx-2">
+                    Privacy Policy
+                </a>
+                |
+                <a href="index.html" class="text-yellow-400 hover:text-yellow-300 mx-2">
+                    Home
+                </a>
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
