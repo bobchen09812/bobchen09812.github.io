@@ -479,14 +479,14 @@
         </div>
     </footer>
 
-    <!-- ==================== JAVASCRIPT ==================== -->
+   <!-- ==================== JAVASCRIPT ==================== -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Configuration Settings
             const config = {
                 backgroundType: 'image',
-                imageSource: 'Leo.jpg',
-                videoSource: 'Leo cover.mp4',
+                imageSource: 'KC018.jpg',
+                videoSource: 'KC018.mp4',
                 opacity: 80,
                 position: 'center',
                 textColor: 'white'
@@ -564,6 +564,44 @@
             });
         });
     </script>
+    <!-- ==================== GA4 COOKIE CONSENT BANNER ==================== -->
+<!-- ADD THIS CODE RIGHT BEFORE </body> IN YOUR index.html -->
+
+<div id="ga4-cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-gray-900 to-black border-t border-yellow-500/50 z-50 p-4 hidden shadow-2xl">
+    <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <!-- Message -->
+            <div class="md:w-3/4">
+                <div class="flex items-center mb-2">
+                    <i class="fa fa-chart-line text-yellow-300 mr-2"></i>
+                    <h3 class="text-lg font-bold text-white">Google Analytics 4 Notice</h3>
+                </div>
+                <p class="text-white/80 text-sm">
+                    This site uses <strong>Google Analytics 4 (GA4)</strong> to understand how visitors use the site. 
+                    GA4 collects anonymous data about page visits and clicks to help improve content. 
+                    <a href="privacy.html#ga4" class="text-yellow-300 hover:text-yellow-200 underline text-sm">
+                        Learn more in Privacy Policy
+                    </a>
+                </p>
+            </div>
+            
+            <!-- Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <button id="accept-ga4" 
+                        class="bg-gradient-to-r from-green-600 to-green-500 text-white font-bold py-3 px-6 rounded-lg hover:from-green-500 hover:to-green-400 transition-all duration-300 flex items-center justify-center min-w-[140px]">
+                    <i class="fa fa-check mr-2"></i>
+                    Accept GA4
+                </button>
+                
+                <button id="reject-ga4" 
+                        class="bg-gradient-to-r from-gray-700 to-gray-600 text-white font-bold py-3 px-6 rounded-lg hover:from-gray-600 hover:to-gray-500 transition-all duration-300 flex items-center justify-center min-w-[140px]">
+                    <i class="fa fa-times mr-2"></i>
+                    Reject GA4
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- GA4 Consent Script -->
 <script>
