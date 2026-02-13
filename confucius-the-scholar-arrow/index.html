@@ -1,1 +1,97 @@
+<!-- Google tag (gtag.js) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confucius The Scholar's Arrow In A Parallel Universe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        typewriter: ['"American Typewriter"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+     <style type="text/tailwindcss">
+        @layer utilities {
+            .parallax {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .content-auto {
+                content-visibility: auto;
+            }
+            .position-left {
+                object-position: left;
+            }
+            .position-center {
+                object-position: center;
+            }
+            .position-right {
+                object-position: right;
+            }
+        }
+    </style>
+  
+</head>
+<body class="bg-black text-white antialiased">
+    <!-- Parallax Background -->
+    <div class="relative h-screen overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="cover(1).mp4" alt="Cover for Confucius" class="w-full h-full object-cover position-center">
+        </div>
+        
+        <!-- Overlay with downward arrow -->
+        <div class="absolute inset-0 bg-black/40 z-10 flex flex-col items-center justify-center">
+            <a href="#content" class="absolute bottom-10 text-4xl animate-bounce text-yellow-300">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+        
+        <!-- Home Button -->
+        <div class="text-center mb-16">
+            <a href="https://bobchen09812.github.io/" class="inline-block bg-yellow-500 text-black font-typewriter font-bold text-xl py-4 px-8 rounded-lg hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+                <i class="fa fa-refresh mr-2"></i>Home
+            </a>
+        </div>
+    </div>
 
+    <footer class="bg-black border-t border-white/20 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-typewriter text-white/70">Ancient wisdom for modern times</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple parallax effect for non-fixed backgrounds on mobile
+        document.addEventListener('DOMContentLoaded', function() {
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            function handleScroll() {
+                parallaxElements.forEach(element => {
+                    const yPos = -window.pageYOffset / 10;
+                    element.style.backgroundPosition = `center ${yPos}px`;
+                });
+            }
+            
+            if (window.innerWidth > 768) {
+                window.addEventListener('scroll', handleScroll);
+            }
+        });
+    </script>
+</body>
+</html>
