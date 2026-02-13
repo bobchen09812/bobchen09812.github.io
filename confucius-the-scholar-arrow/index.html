@@ -49,10 +49,16 @@
 </head>
 <body class="bg-black text-white antialiased">
     <!-- Parallax Background -->
-    <div class="relative h-screen overflow-hidden">
-        <div class="absolute inset-0 z-0">
-           <source src="cover (1).mp4" type="video/mp4"> class="w-full h-full object-cover position-center">
-        </div>
+   <!-- Video Background -->
+            <video 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                class="w-full h-full object-cover position-center"
+                id="backgroundVideo"
+            >
+                <source src="cover (1).mp4" type="video/mp4">
 
         
         <!-- Overlay with downward arrow -->
