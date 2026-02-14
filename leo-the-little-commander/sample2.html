@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KPRMDLD1RZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KPRMDLD1RZ');
+</script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo The Little Commander</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=American+Typewriter&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        typewriter: ['"American Typewriter"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .parallax {
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            }
+            .content-auto {
+                content-visibility: auto;
+            }
+            .position-left {
+                object-position: left;
+            }
+            .position-center {
+                object-position: center;
+            }
+            .position-right {
+                object-position: right;
+            }
+            .text-yellow-300-custom {
+                color: #fcd34d;
+            }
+            .text-red-300-custom {
+                color: #fca5a5;
+            }
+            .text-blue-300-custom {
+                color: #93c5fd;
+            }
+        }
+    </style>
+    
+    <!-- ADD THIS FIX STYLE - Only new addition -->
+    <style>
+        /* FIX 1: Ensure content is above background */
+        #content, .content-wrapper {
+            position: relative;
+            z-index: 50 !important;
+        }
+        
+        /* FIX 2: Fix the covering issue */
+        .fixed-bg-fix {
+            z-index: 0 !important;
+        }
+        
+        /* FIX 3: First paragraph larger font */
+        .first-paragraph {
+            font-size: 1.5rem !important;
+            line-height: 1.75 !important;
+        }
+        
+        /* FIX 4: Normal paragraphs consistent */
+        .normal-paragraph {
+            font-size: 1.125rem !important;
+            line-height: 1.75 !important;
+        }
+        
+        /* FIX 5: Ensure text is visible */
+        .text-visible {
+            color: white !important;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white font-typewriter min-h-screen">
+    
+    <!-- Overlay to darken background -->
+    <div id="overlay" class="fixed inset-0 bg-black/1 z-10"></div>
+    
+    <!-- Parallax Background with Video Support -->
+    <div class="relative h-screen overflow-hidden z-20"></div>
+        <div class="absolute inset-0 z-0">
+                <!-- Fallback to Image -->
+                <img src="leo.jpg" alt=Leo The Little Commander" class="w-full h-full object-cover position-center">
+        </div>
+
+        <!-- Overlay with downward arrow -->
+        <div class="absolute inset-0 bg-black/1 z-10 flex flex-col items-center justify-center">
+            <a href="#content" class="absolute bottom-10 text-4xl animate-bounce text-yellow-300">
+                <i class="fa fa-chevron-down"></i>
+            </a>
+        </div>
+    </div>
+    
+    <!-- Main Content - Added content-wrapper class -->
+    <div id="content" class="container mx-auto px-4 py-16 relative content-wrapper">
+        <!-- Text Content Section -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <!-- FIXED: Changed <h> to <h1> -->
+            <h1 class="text-[clamp(2rem,8vw,5rem)] font-typewriter text-shadow mb-10 text-visible">Leo he Little CommanderT</h1>
+            <h2 class="text-4xl md:text-5xl font-typewriter text-center mb-8 text-visible">A Hero Who Wins Battles By Making Friends</h2>
+        </div>
+    
+        <div class="bg-white/5 p-6 rounded-lg border border-yellow-300/30 backdrop-blur-sm">
+            <h3 class="text-2xl font-typewriter text-yellow-300 mb-3 text-center text-visible">CHAPTER 0: The Teacher And A Friend
+</h3>
+            
+            <!-- FIXED PARAGRAPHS: Applied font fix classes -->
+             <p class="font-typewriter normal-paragraph text-visible">Deep in the heart of Jungle Heart Kingdom, where the water was so still it could show the future, an ancient turtle sat atop the Moonwater Pond.  
+
+</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">This was Master Sun, the greatest teacher who ever lived.
+</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">One evening, Master Sun peered at the pond’s surface.  
+.</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">"Show me one who can lead," he murmured</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">The water rippled, revealing…  
+</p>
+            <br>
+
+           <p class="font-typewriter normal-paragraph text-visible">TA small lion cub with messy golden fur.  
+</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">The cub, Leo, stood between a screeching hawk and a trembling mouse. "You’ll have to go through me first!” he growled.
+</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">Master Sun’s eyes twinkled. "Ah. Courage and humility. Rare indeed."
+</p>
+            <br>
+
+             <p class="font-typewriter normal-paragraph text-visible">But then the turtle sighed. "Yet to be a true leader, he must learn to balance…"
+</p>
+            <br>
+
+             <p class="font-typewriter normal-paragraph text-visible">He dipped a claw into the water. "For every sun, there must be fire". Something red and fluffy shot out of the pond, coughing up lotus seeds.  
+
+</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">The creature shook itself dry, revealing a red panda cub with black paws and  painted face. His tail sparks.  
+</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">“I’m Xiao Xiao!" He bowed dramatically, then jumped towards Leo. 
+</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">Master Sun cleared his throat. "Xiao Xiao, you have Nezha’s spirit—bold and clever Chinese god, but…”
+</p>
+            <br>
+            
+            <p class="font-typewriter normal-paragraph text-visible">”Good, right?" Xiao Xiao finished, juggling three mangoes. One hit Leo’s head. ”Leo, you need me for your training!”
+</p>
+            <br>
+
+             <p class="font-typewriter normal-paragraph text-visible">Leo asked Master Sun. "Why do I need him?"
+</p>
+            <br>
+
+            <p class="font-typewriter normal-paragraph text-visible">Master Sun smiled. "Sun Tzu says: ‘Know all voices before choosing your path.’ Xiao Xiao will show you the other way—the way of fire and fun."  
+</p>
+            <br>
+
+             <p class="font-typewriter normal-paragraph text-visible">MXiao Xiao gasped. "Does this mean we get to explode things?"  
+
+</p>
+            <br>
+
+             <p class="font-typewriter normal-paragraph text-visible">"No, we will begin tomorrow " said Master Sun. 
+  
+</p>
+            <br>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="text-center mb-16 mt-8">
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="/leo-the-little-commander/index.html" class="bg-yellow-500 text-black font-typewriter font-bold text-xl py-4 px-8 rounded-lg hover:bg-yellow-400 transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
+                    <i class="fa fa-refresh mr-2"></i>Home
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-black border-t border-white/20 py-8 relative z-20">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-typewriter text-white/70">Where Ink Meets Steel and AI Meets Ancestors</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Configuration Settings - Modify these values to change the appearance
+            const config = {
+                backgroundType: 'image',    // Options: 'black', 'image', 'video'
+                imageSource: 'Screenshot 2025-07-21 at 11.23.04 AM.png',  // Path to background image
+                videoSource: 'KC018.mp4',  // Path to background video
+                opacity: 80,                // Background opacity (0-100)
+                position: 'center',        // Background position: 'left', 'center', 'right'
+                textColor: 'white'    // Text color: 'white', 'yellow-300', 'red-300', 'blue-300'
+            };
+            
+            // Apply configuration
+            const backgroundContainer = document.getElementById('background-container');
+            const imageBg = document.getElementById('image-bg');
+            const videoBg = document.getElementById('video-bg');
+            const allTextElements = document.querySelectorAll('h1, h2, h3, p, a, footer');
+            
+            // Set opacity
+            backgroundContainer.style.opacity = config.opacity / 100;
+            
+            // Set position
+            if (imageBg) {
+                imageBg.classList.remove('position-left', 'position-center', 'position-right');
+                imageBg.classList.add(`position-${config.position}`);
+            }
+            
+            if (videoBg) {
+                videoBg.classList.remove('position-left', 'position-center', 'position-right');
+                videoBg.classList.add(`position-${config.position}`);
+            }
+            
+            // Set background type
+            if (config.backgroundType === 'image') {
+                if (imageBg) {
+                    imageBg.src = config.imageSource;
+                    imageBg.classList.remove('hidden');
+                }
+                if (videoBg) videoBg.classList.add('hidden');
+                document.getElementById('black-bg').classList.add('hidden');
+            } else if (config.backgroundType === 'video') {
+                if (videoBg) {
+                    videoBg.querySelector('source').src = config.videoSource;
+                    videoBg.load();
+                    videoBg.classList.remove('hidden');
+                }
+                if (imageBg) imageBg.classList.add('hidden');
+                document.getElementById('black-bg').classList.add('hidden');
+            } else {
+                document.getElementById('black-bg').classList.remove('hidden');
+                if (imageBg) imageBg.classList.add('hidden');
+                if (videoBg) videoBg.classList.add('hidden');
+            }
+            
+            // Set text color
+            allTextElements.forEach(el => {
+                el.classList.remove('text-yellow-300', 'text-red-300', 'text-blue-300', 'text-yellow-300-custom', 'text-red-300-custom', 'text-blue-300-custom');
+                
+                if (config.textColor === 'yellow-300') {
+                    el.classList.add('text-yellow-300-custom');
+                } else if (config.textColor === 'red-300') {
+                    el.classList.add('text-red-300-custom');
+                } else if (config.textColor === 'blue-300') {
+                    el.classList.add('text-blue-300-custom');
+                } else {
+                    el.classList.add('text-white');
+                }
+            });
+            
+            // Set video position based on URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const position = urlParams.get('position') || config.position;
+            
+            const video = document.getElementById('backgroundVideo');
+            if (video) {
+                video.classList.remove('position-left', 'position-center', 'position-right');
+                video.classList.add(`position-${position}`);
+            }
+            
+            // Simple parallax effect for non-fixed backgrounds on mobile
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            function handleScroll() {
+                parallaxElements.forEach(element => {
+                    const yPos = -window.pageYOffset / 10;
+                    element.style.backgroundPosition = `center ${yPos}px`;
+                });
+            }
+            
+            if (window.innerWidth > 768) {
+                window.addEventListener('scroll', handleScroll);
+            }
+            
+            // FIX: Remove problematic overlay elements
+            const problematicOverlay = document.querySelector('#overlay');
+            if (problematicOverlay) {
+                problematicOverlay.style.display = 'none';
+            }
+            
+            // FIX: Clean up broken video tag
+            const brokenVideoTags = document.querySelectorAll('video:not([id])');
+            brokenVideoTags.forEach(tag => tag.remove());
+            
+            // FIX: Ensure content is visible
+            const contentDivs = document.querySelectorAll('#content');
+            contentDivs.forEach(div => {
+                div.style.zIndex = '50';
+                div.style.position = 'relative';
+            });
+        });
+    </script>
+</body>
+</html>
